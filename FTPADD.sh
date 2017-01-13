@@ -22,7 +22,7 @@ if [ $# -eq 2 ];then
 	mkdir /ftpfiles/$USER
 	usermod -d /ftpfiles/$USER -s /sbin/nologin -g ftpaccess $USER
 	echo "$PASSWD" | passwd $USER --stdin
-	chown -R $USER /ftpfiles/$USER
+	chown -R $USER:ftpaccess /ftpfiles/$USER
 	
 else
 
